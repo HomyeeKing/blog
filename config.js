@@ -33,8 +33,10 @@ module.exports = {
     evergreen: true,
     serviceWorker: true,
     locales: {
-        '/': {
-            lang: 'pt-br'
+        '/zh/': {
+            lang: 'zh-CN',
+            title: 'VuePress',
+            description: 'Vue 驱动的静态网站生成器'
         },
         '/en/': {
             lang: 'en'
@@ -49,13 +51,28 @@ module.exports = {
         docsDir: '',
         editLinkText: '',
         lastUpdated: false,
+        locales: {
+            '/': {
+                selectText: 'Languages',
+                label: 'English',
+                ariaLabel: 'Languages',
+                editLinkText: 'Edit this page on GitHub',
+                serviceWorker: {
+                    updatePopup: {
+                        message: "New content is available.",
+                        buttonText: "Refresh"
+                    }
+                },
+            },
+
+        },
         nav: [{
                 text: 'Guide',
-                link: '/guide/',
+                link: '/zh/guide/',
             },
             {
                 text: 'Config',
-                link: '/config/'
+                link: '/zh/config/'
             },
             {
                 text: 'VuePress',
@@ -63,12 +80,13 @@ module.exports = {
             }
         ],
         sidebar: {
-            '/guide/': [{
+            '/zh/guide/': [{
                 title: 'Guide',
                 collapsable: false,
                 children: [
                     '',
                     'using-vue',
+                    'tourGuid'
                 ]
             }],
         }
