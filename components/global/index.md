@@ -1,0 +1,1 @@
+Auto importing components will not work for `<nuxt-content>` unless we globally register them by adding a global folder inside the components folder.
